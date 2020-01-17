@@ -1,0 +1,5 @@
+功能：不断发生一些垃圾流量干扰对面
+在目录/home/web/flag/新建些混淆的flag
+文件名为flag
+
+使用：mix_flow.py

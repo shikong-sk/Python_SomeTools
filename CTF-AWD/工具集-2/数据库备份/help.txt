@@ -1,0 +1,4 @@
+python mysql_backup.py
+默认账号root、密码root
+如果不一致请主动修改！
+ps：密码不能为空，如果为空请自己mysqladmin -u root -p password root设置新密码（新密码为root）

@@ -1,0 +1,3 @@
+﻿功能：目录什么文件被更改，什么文件被创建
+python watch.py 监控目录
+python watch.py /var/www

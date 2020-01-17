@@ -1,0 +1,5 @@
+Time£º2019-06-13_15:43:35 IP£º10.0.2.2 Method£ºPOST Page£º/upload/ssk.php Data£ºsk%3Decho%20getcwd%28%29%3B
+Time£º2019-06-13_15:43:43 IP£º10.0.2.2 Method£ºGET Page£º/upload/ssk.php?sk=echo%20getcwd(); Data£º
+Time£º2019-06-13_15:43:50 IP£º10.0.2.2 Method£ºPOST Page£º/upload/ssk.php Data£ºsk%3Decho%20getcwd%28%29%3B
+Time£º2019-06-13_15:43:50 IP£º10.0.2.2 Method£ºGET Page£º/upload/flag Data£º
+Time£º2019-06-13_15:43:54 IP£º10.0.2.2 Method£ºPOST Page£º/upload/ssk.php Data£ºsk%3Decho%20getcwd%28%29%3B

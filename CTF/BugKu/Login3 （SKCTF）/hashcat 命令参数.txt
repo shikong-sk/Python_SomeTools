@@ -1,0 +1,1 @@
+hashcat64.exe md5.txt -m 0 -a 3 --increment --increment-min 6 --increment --increment-max 11 --custom-charset1=0123456789abcdef ?1?1?1?1?1?1?1?1?1?1?1 -O --force

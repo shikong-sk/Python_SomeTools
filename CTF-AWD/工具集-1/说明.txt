@@ -1,0 +1,43 @@
+[第一步]
+cron.sh （手动运行）
+首次运行一次性批量添加定时任务 每分钟运行一次 backup.sh 和 file.sh
+第二次运行删除对应的定时任务
+
+backup.sh （自/手动运行）可一键备份/var/www 或 /www/wwwroot 或 /home/wwwroot目录
+备份的文件在对应目录的上一级目录下 格式为：YYYY-mm-dd HH:MM:SS
+
+file.sh （自/手动运行）可一键遍历 /var/www 或 /www/wwwroot 或 /home/wwwroot目录 生成效验文件 第一次运行会在脚本目录下生成主效验文件 root.sha 如需修改文件请先删除root.sha 并重新生成
+如果效验异常则会输出且会写入到show.log日志中
+
+show.sh (手动运行) 定时输出show.log日志
+
+## nginx日志监控 ##
+nginx.sh (手动运行) 如果运行环境为nginx 则手动运行此脚本自动修改nginx日志设置开启访问日志记录
+
+access.sh (手动运行) 开启访问日志记录后运行此脚本则可以实时输出访问日志记录
+
+## webshell连接 ##
+exp.py（python3/Windows）可手动连接一句话木马 具体参数可修改脚本内的 url 和 shell 地址
+
+## 抓包-分析-反击 ##
+catch.sh （手动运行）运行此脚本需主机上装有tcpdump组件
+可抓取主机上指定网卡上的80端口的入站流量并将抓取到的流量存储到脚本目录下的catch.cap
+
+cap.py（python3/Windows）需本机上装有scapy库才能运行 可一键分析脚本目录下的catch.cap 并提取数据存储到cap.txt
+
+ip.py（python3/Windows）快速ping一个网段内的在线主机并存储到ip.txt
+参数格式： 算法 网络号[默认192.168.1] 主机号范围(例： 1 254 )[默认1~254]
+算法： 1.单线程 2.多进程 3.多线程-1 4.多线程-2 （推荐使用算法3或4）
+[如果需要手动添加可手动编辑ip.txt 一行一个IP]
+
+load.py （python3/Windows）需本机上装有request库才能运行 可根据前者生成的cap.txt和ip.txt实现反打其他主机 可指定端口号
+如果访问的页面中含有flag{XXXXXXXXXXXXXX} 或 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 形式的文字则会抓取并保存到flag.txt
+
+[实验性脚本（此处生成的文件暂时无法一键解析，可根据情况需要使用和判断，如果运行环境不是nginx可用此脚本救急）]
+[运行环境：Centos（wireshark） Ubuntu（tshark）]
+
+catch-real.sh （手动运行）实时抓取数据包 可手动指定网卡和端口并将抓取到的数据包存储到cat.tmp
+
+catch-show.sh （手动运行/新建会话） 实时输出cat.tmp转换后的数据
+
+catch-convert.sh （手动运行/新建会话） 将抓取到的数据包按一定格式转换输出到 catch.log
