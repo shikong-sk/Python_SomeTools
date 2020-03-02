@@ -9,9 +9,9 @@ import subprocess
 import time
 import sys
 
-address_D = '192.168.1';
-address_Min = 1;
-address_MAX = 254 + 1;
+address_D = '192.168.1'
+address_Min = 1
+address_MAX = 254 + 1
 
 def kill():
 	# subprocess.call('taskkill -f -im ping.exe',stdout=subprocess.PIPE,stderr=subprocess.PIPE)
@@ -24,11 +24,11 @@ def address():
 		x = str(sys.argv[2])
 	else:
 		x = address_D
-	return x;
+	return x
 
 def ping_ip(ip):
 	global address_D
-	global online
+	# global online
 	address_D = address()
 	ip = str(address_D) + '.' + str(ip)
 	res = subprocess.call('ping -n 1 -w 1 -l 1 %s' % ip,stdout=subprocess.PIPE)
